@@ -1,3 +1,7 @@
 .c9/
 BigData/
 myVirtualEnvName/
+env/
+*pyc*
+*pycache*
+
