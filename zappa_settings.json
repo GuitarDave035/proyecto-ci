@@ -1,0 +1,25 @@
+{
+    "dev": {
+        "app_function": "proyecto.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "proyecto-dev",
+        "runtime": "python3.10",
+        "keep_warm": false,
+        "s3_bucket": "zappa-2scr5hng1",
+        "apigateway_enabled": false,
+        "manage_roles": false,
+        "role_name": "LabRole",
+        "events": [
+          {
+            "function": "proyecto.app",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::bucketprueba035",
+                  "events": [
+                    "s3:ObjectCreated:*"
+                  ]
+               }
+            }]
+    }
+}
+
